@@ -42,7 +42,36 @@ label.top (btex $11$ etex,  .5[(0,3)*u,(11,3)*u]);
 label.top (btex $5$ etex,  .5[(11,3)*u,(16,3)*u]);
 label.lft (btex $3$ etex,  .5[(0,0)*u,(0,3)*u]);
 label.rt (btex $3$ etex,  .5[(16,0)*u,(16,3)*u]);
-whitelabel.urt (btex $5$ etex,  .5[(11,3)*u,(15,0)*u]);
+whitelabel (btex $52=\tfrac{3+5}2\cdot \tfrac{11+15}2$ etex,  .5[(0,0)*u,(13,3)*u]+(0,3));
+whitelabel (btex {\scriptsize $12=\tfrac{5+3}2\cdot \tfrac{5+1}2$} etex rotated -30,  .5[(16,0)*u,(13,3)*u]+(0,5)+(-.2,1.8)*u);
+whitelabel (btex $5$ etex rotated angle(4,-3),  .5[(11,3)*u,(15,0)*u]+.3*(3,4));
+endfig;
+
+beginfig(11)
+save u,p,a,b;
+path p[];
+u:=.4cm;
+a:=4;
+b:=25;
+
+draw (b-1,0)*u--(b-4,a)*u penbold;
+draw (0,0)*u--(b,0)*u--(b,a)*u--(0,a)*u--cycle penbold;
+
+for i = 1 upto b-1:
+draw (i,0)*u--(i,a)*u penhair;
+endfor;
+
+for i = 1 upto a-1:
+draw (0,i)*u--(b,i)*u penhair;
+endfor;
+
+label.bot (btex $24$ etex,  .5[(0,0)*u,(b-1,0)*u]);
+label.bot (btex $1$ etex,  .5[(b-1,0)*u,(b,0)*u]);
+label.top (btex $21$ etex,  .5[(0,a)*u,(b-4,a)*u]);
+label.top (btex $4$ etex,  .5[(b-4,a)*u,(b,a)*u]);
+label.lft (btex $4$ etex,  .5[(0,0)*u,(0,a)*u]);
+label.rt (btex $4$ etex,  .5[(b,0)*u,(b,a)*u]);
+whitelabel (btex $5$ etex rotated angle(3,-4),  .5[(b-4,a)*u,(b-1,0)*u]+(-2,0));
 endfig;
 
 beginfig(20)
