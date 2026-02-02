@@ -21,7 +21,7 @@ outputformat := "eps";
 beginfig(10) 
 save u,p;
 path p[];
-u:=.5cm;
+u:=.6cm;
 
 
 
@@ -43,7 +43,7 @@ label.top (btex $5$ etex,  .5[(11,3)*u,(16,3)*u]);
 label.lft (btex $3$ etex,  .5[(0,0)*u,(0,3)*u]);
 label.rt (btex $3$ etex,  .5[(16,0)*u,(16,3)*u]);
 whitelabel (btex $52=\tfrac{3+5}2\cdot \tfrac{11+15}2$ etex,  .5[(0,0)*u,(13,3)*u]+(0,3));
-whitelabel (btex {\scriptsize $12=\tfrac{5+3}2\cdot \tfrac{5+1}2$} etex rotated -30,  .5[(16,0)*u,(13,3)*u]+(0,5)+(-.2,1.8)*u);
+whitelabel (btex {\scriptsize $12=\tfrac{5+3}2\cdot \tfrac{5+1}2$} etex rotated -30,  .5[(16,0)*u,(13,3)*u]+(0,5)+(-.2,1.6)*u);
 whitelabel (btex $5$ etex rotated angle(4,-3),  .5[(11,3)*u,(15,0)*u]+.3*(3,4));
 endfig;
 
