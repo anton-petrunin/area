@@ -127,6 +127,8 @@ label.bot (btex $a$ etex,  .55[z.A,z.AA]);
 label.llft (btex $b$ etex,  .6[z.B,z.BB]+z.shift);
 label.top (btex $c$ etex,  .55[z.C,z.CC]);
 label.urt (btex $d$ etex,  .6[z.D,z.DD]+z.shift);
+
+label.bot (btex $S(ABCD)=S(ABC)+ S(CDA)$\quad и\quad $S(ABCD)=S(BCD)+ S(DAB)$ etex,  z.A+.5*z.shift +(-0,-10));
 endfig;
 
 end
