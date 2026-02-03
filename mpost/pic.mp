@@ -84,7 +84,7 @@ z.B=(4,2)*u;
 z.C=(3,6)*u;
 z.D=(-.5,3.5)*u;
 
-z.shift=(10,0)*u;
+z.shift=(12,0)*u;
 
 p0=z.A--z.B--z.C--z.D--cycle;
 p1=z.A--z.C;
@@ -128,7 +128,7 @@ label.llft (btex $b$ etex,  .6[z.B,z.BB]+z.shift);
 label.top (btex $c$ etex,  .55[z.C,z.CC]);
 label.urt (btex $d$ etex,  .6[z.D,z.DD]+z.shift);
 
-label.bot (btex $S(ABCD)=S(ABC)+ S(CDA)$\quad и\quad $S(ABCD)=S(BCD)+ S(DAB)$ etex,  z.A+.5*z.shift +(-0,-10));
+label.bot (btex $S(ABCD)=S(ABC)+ S(CDA)$\quad и\quad $S(ABCD)=S(BCD)+ S(DAB)$ etex,  .5[z.A,(x.B,y.A)]+.5*z.shift +(-0,-12));
 endfig;
 
 end
