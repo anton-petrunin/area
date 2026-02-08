@@ -25,8 +25,8 @@ u:=.6cm;
 
 
 
-draw (15,0)*u--(11,3)*u penbold;
-draw (0,0)*u--(16,0)*u--(16,3)*u--(0,3)*u--cycle penbold;
+draw (15,0)*u--(11,3)*u pensemibold;
+draw (0,0)*u--(16,0)*u--(16,3)*u--(0,3)*u--cycle pensemibold;
 
 for i = 1 upto 15:
 draw (i,0)*u--(i,3)*u penhair;
@@ -54,8 +54,8 @@ u:=.4cm;
 a:=4;
 b:=25;
 
-draw (b-1,0)*u--(b-4,a)*u penbold;
-draw (0,0)*u--(b,0)*u--(b,a)*u--(0,a)*u--cycle penbold;
+draw (b-1,0)*u--(b-4,a)*u pensemibold;
+draw (0,0)*u--(b,0)*u--(b,a)*u--(0,a)*u--cycle pensemibold;
 
 for i = 1 upto b-1:
 draw (i,0)*u--(i,a)*u penhair;
@@ -72,6 +72,41 @@ label.top (btex $4$ etex,  .5[(b-4,a)*u,(b,a)*u]);
 label.lft (btex $4$ etex,  .5[(0,0)*u,(0,a)*u]);
 label.rt (btex $4$ etex,  .5[(b,0)*u,(b,a)*u]);
 whitelabel (btex $5$ etex rotated angle(3,-4),  .5[(b-4,a)*u,(b-1,0)*u]+(-2,0));
+endfig;
+
+beginfig(15)
+save u,p;
+path p[];
+u:=1cm;
+
+z.a=(0,0)*u;
+z.b=(1,-1)*u;
+z.c=(3,0)*u;
+z.d=(1.3,1.1)*u;
+
+z.aa=(4,0)*u;
+z.cc=(4+3.6,0)*u;
+p10=circle(z.aa,z.b-z.a);
+p11=circle(z.cc,z.b-z.c);
+z.bb=cross.bot(p10,p11);
+p20=circle(z.aa,z.d-z.a);
+p21=circle(z.cc,z.d-z.c);
+z.dd=cross.top(p20,p21);
+
+p1=z.a--z.b--z.c--z.d--cycle;
+p2=z.aa--z.bb--z.cc--z.dd--cycle;
+
+fill p1 withcolor (0.2, 0.7, 0.1);
+fill p2 withcolor (0.2, 0.7, 0.1);
+draw p1 pensemibold;
+draw p2 pensemibold;
+draw z.a--z.c dashed evenly;
+draw z.aa--z.cc dashed evenly;
+rimmark(z.a--z.b,z.aa--z.bb);
+rimmark2(z.b--z.c,z.bb--z.cc);
+rimmark3(z.c--z.d,z.cc--z.dd);
+rimmark4(z.d--z.a,z.dd--z.aa);
+
 endfig;
 
 beginfig(20)
@@ -93,10 +128,10 @@ p2=z.B--z.D;
 fill p0 withcolor (0.2, 0.7, 0.1);
 fill p0 shifted z.shift withcolor (0.2, 0.7, 0.1);
 
-draw p0 penbold;
-draw p1 penbold;
-draw p0 penbold shifted z.shift;
-draw p2 penbold shifted z.shift;
+draw p0 pensemibold;
+draw p1 pensemibold;
+draw p0 pensemibold shifted z.shift;
+draw p2 pensemibold shifted z.shift;
 
 z.AA=altitude (z.B,z.A,z.C);
 z.BB=altitude (z.C,z.B,z.D);
